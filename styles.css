@@ -1,0 +1,668 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Deep Black */
+    color: #EAEAEA; /* Light Grey */
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #FFD700, #121212);
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(255, 215, 0, 0.5);
+}
+
+/* Logo */
+.logo img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    display: inline;
+}
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #FFD700;
+}
+
+/* Menu Toggle Button (for Mobile) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/.hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFD700; /* Gold Color */
+}
+
+.hero .highlight {
+    color: white;
+    background: linear-gradient(90deg, #FFD700, #FFA500); 
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+
+.founder-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #EAEAEA; /* Light Grey */
+    margin-top: 10px;
+}
+
+.highlight-founder {
+    color: #FFD700; /* Gold Highlight */
+    font-weight: bold;
+    font-size: 22px;
+    background: rgba(255, 215, 0, 0.2);
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+/* Reduce About Section Image Size */
+#about img {
+    max-width: 400px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Centers the image */
+    border-radius: 10px; /* Optional: Adds smooth corners */
+}
+
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Headings */
+h2 {
+    color: #FFD700;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Menu & Items */
+.menu-list, .special-list, .sweets-list, .juices-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+.menu-item, .special-item, .sweets-item, .juice-item {
+    background: #1E1E1E;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(255, 215, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s;
+}
+.menu-item img, .special-item img, .sweets-item img, .juice-item img {
+        width: 120px; /* Adjust if needed */
+        height: 120px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 5px; /* Reduce space below image */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+.menu-item:hover, .special-item:hover, .sweets-item:hover, .juice-item:hover {
+    transform: scale(1.05);
+}
+/* Menu Section */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+/* Left & Right Menu Sections */
+.nonveg-menu {
+    width: 45%;
+    background: #1E1E1E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(255, 215, 0, 0.3);
+}
+/* Adjusting the Menu Layout */
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Adjusting Widths */
+.veg-menu, .nonveg-menu {
+    width: 45%;
+    background: #1E1E1E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(255, 215, 0, 0.3);
+}
+
+/* Adding Empty Space to Veg Menu */
+.veg-menu {
+    padding-bottom: 150px; /* Adjust this value based on the required height */
+}
+
+/* Famous Dishes Section */
+.famous-dishes {
+    width: 80%; /* Adjust to fit within content space */
+    background: #1E1E1E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.2);
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Section Title */
+.famous-dishes .category-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFD700; /* Gold */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Dishes Grid */
+.famous-dish-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Dish Box */
+.dish-item {
+    background: #252525;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(255, 215, 0, 0.2);
+    text-align: center;
+    min-width: 150px;
+    transition: transform 0.3s;
+}
+
+/* Dish Name */
+.dish-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+/* Dish Price */
+.dish-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFD700; /* Gold */
+    margin-left: 5px;
+}
+
+/* Hover Effect */
+.dish-item:hover {
+    transform: scale(1.05);
+}
+
+/* Menu Title */
+.category-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFD700; /* Gold */
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Menu List */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding: 8px 0;
+}
+
+/* Prices */
+.item-price {
+    font-weight: 700;
+    color: #FFD700; /* Gold */
+}
+
+
+/* Category Titles */
+.category-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFD700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 5px;
+}
+
+/* Menu List */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Menu Items */
+.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    padding: 8px 15px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    transition: background 0.3s;
+}
+
+/* Item Name */
+.item-name {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+/* Item Price */
+.item-price {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/* Hover Effect */
+.menu-list li:hover {
+    background: rgba(255, 215, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Buttons */
+.button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+.button:hover {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+/* Ambience Section */
+.ambience .gallery {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ambience .gallery img {
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Align Content */
+.contact p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px; /* Increased spacing */
+}
+
+/* Social Links */
+.contact .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    margin-top: 20px;
+}
+
+/* Social Buttons */
+.contact .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    background-color: #FFD700;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    width: 180px; /* Uniform size */
+    height: 50px;
+}
+
+.contact .button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.contact .button:hover {
+    background-color: #FFF;
+    transform: scale(1.05);
+}
+/* Footer */
+footer {
+    background: #121212;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+.nonveg-menu {
+    margin-bottom: 40px; /* Adds spacing below the Non-Veg Menu */
+}
+
+.menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adds spacing between images */
+}
+
+.menu-item {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(255, 215, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s;
+    background: #1E1E1E;
+}
+.booking .video-container {
+    display: flex;
+    justify-content: center; /* Centers the video */
+    margin: 30px auto; /* Adds spacing above and below */
+}
+
+.booking .video-container video {
+    width: 50%; /* Adjusts the width */
+    max-width: 500px; /* Limits the max size */
+    border-radius: 10px; /* Smooth edges */
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3); /* Soft glow effect */
+}
+.image-gallery {
+    display: flex;
+    justify-content: center; /* Align images in the center */
+    gap: 20px; /* Adds spacing between images */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.image-gallery .image-card {
+    background: #1E1E1E; /* Dark background for contrast */
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3); /* Gold glow effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery .image-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.image-gallery img {
+    width: 180px; /* Set image size */
+    height: 180px; /* Maintain consistency */
+    object-fit: cover;
+    border-radius: 10px; /* Rounded corners */
+}
+.special-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Increased gap for better spacing */
+    flex-wrap: wrap;
+}
+
+.special-item {
+    background: #1E1E1E;
+    padding: 15px; /* Increased padding for a better layout */
+    border-radius: 12px;
+    width: 150px; /* Slightly larger for better proportion */
+    height: 180px; /* Adjusted to fit the name properly */
+    display: flex;
+    flex-direction: column; /* Aligns text below image */
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 6px rgba(255, 215, 0, 0.4); /* Slightly more prominent shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.special-item img {
+    width: 110px; /* Increased image size slightly */
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.special-name {
+    font-size: 14px; /* Smaller, clean font */
+    font-weight: 600;
+    color: #FFD700; /* Gold */
+    text-align: center;
+    margin-top: 10px; /* Space between image and name */
+    font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+.special-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 6px 10px rgba(255, 215, 0, 0.6); /* Increased shadow for hover effect */
+}
+
+.sweets-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Consistent gap */
+    flex-wrap: wrap;
+}
+
+.sweets-item {
+    background: #1E1E1E;
+    padding: 15px; /* Consistent padding */
+    border-radius: 12px;
+    width: 150px; /* Same width as special items */
+    height: 180px; /* Adjusted height for better proportion */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 6px rgba(255, 215, 0, 0.4); /* Enhanced shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sweets-item img {
+    width: 110px; /* Same image size as special items */
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.sweets-name {
+    font-size: 14px; /* Clean and readable font */
+    font-weight: 600;
+    color: #FFD700; /* Gold */
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sweets-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 6px 10px rgba(255, 215, 0, 0.6); /* Hover effect */
+}
+.juices-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Consistent gap */
+    flex-wrap: wrap;
+}
+
+.juice-item {
+    background: #1E1E1E;
+    padding: 15px; /* Consistent padding */
+    border-radius: 12px;
+    width: 150px; /* Same width as special items */
+    height: 180px; /* Adjusted height for better proportion */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 6px rgba(255, 215, 0, 0.4); /* Enhanced shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.juice-item img {
+    width: 110px; /* Same image size as special items */
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.juice-name {
+    font-size: 14px; /* Clean and readable font */
+    font-weight: 600;
+    color: #FFD700; /* Gold */
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.juice-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 6px 10px rgba(255, 215, 0, 0.6); /* Hover effect */
+}
+.contact-info {
+    text-align: center;
+    background: #1E1E1E;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(255, 215, 0, 0.3);
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.contact-info h2 {
+    color: #FFD700;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.features {
+    font-size: 18px;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.opening-hours {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.opening-hours td {
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 5px 10px;
+}
+
+.opening-hours .highlight {
+    font-weight: bold;
+    color: #FFD700;
+}
+.book-table video {
+    width: 80%; /* Adjust width to make it smaller */
+    max-width: 600px; /* Limit the maximum size */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 20px auto; /* Centering */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.3); /* Soft shadow */
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adds spacing above the video */
+}
+
+.video-container video {
+    width: 70%; /* Adjust width to make it smaller */
+    max-width: 500px; /* Limits max width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.3); /* Adds soft shadow */
+}
