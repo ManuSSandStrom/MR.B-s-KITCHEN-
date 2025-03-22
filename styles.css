@@ -150,6 +150,7 @@ h2 {
     align-items: flex-start;
     gap: 50px;
     margin-top: 40px;
+    flex-wrap: wrap; /* Allows menus to stack on smaller screens */
 }
 
 /* Left & Right Menu Sections */
@@ -160,6 +161,7 @@ h2 {
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(255, 215, 0, 0.3);
 }
+
 /* Adjusting the Menu Layout */
 .menu-container {
     display: flex;
@@ -242,6 +244,26 @@ h2 {
     transform: scale(1.05);
 }
 
+/* ✅ Responsive Fix for Mobile View */
+@media screen and (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .veg-menu, .nonveg-menu {
+        width: 90%; /* Full width for better readability */
+        margin-bottom: 20px; /* Adds spacing between sections */
+    }
+
+    .famous-dishes {
+        width: 95%; /* Adjust width to fit smaller screens */
+    }
+
+    .famous-dish-list {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust grid for small screens */
+    }
+}
 /* Menu Title */
 .category-title {
     font-size: 24px;
@@ -666,3 +688,95 @@ footer {
     border-radius: 10px; /* Optional: Adds rounded corners */
     box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.3); /* Adds soft shadow */
 }
+/* Navigation Container */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px; /* Increased left-right padding */
+    background: linear-gradient(to right, #FFD700, #D4A017);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+    height: 55px; /* Adjust size */
+    max-width: 100%;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Ensures proper vertical alignment */
+    gap: 25px; /* Increased spacing between menu items */
+    margin-left: auto;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px; /* Slightly bigger for readability */
+    font-weight: 600;
+    color: black;
+    padding: 12px 20px; /* Balanced padding */
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* Fix Logo & Menu Alignment */
+@media screen and (max-width: 1024px) {
+    .nav-container {
+        flex-wrap: wrap; /* Allows proper wrapping */
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+    .logo {
+        flex: 1;
+    }
+    .nav-links {
+        flex: 2;
+        justify-content: space-evenly;
+    }
+}
+
+/* Mobile View: Show Menu as Toggle */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none; /* Hide by default */
+        flex-direction: column;
+        background: #1E1E1E;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(255, 215, 0, 0.3);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        padding: 10px 0;
+    }
+    .nav-links a {
+        font-size: 18px;
+        display: block;
+        color: white;
+    }
+}
+

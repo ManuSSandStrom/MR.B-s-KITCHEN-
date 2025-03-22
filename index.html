@@ -14,12 +14,14 @@
 <body>
     <!-- Header -->
     <header>
+        <div class ="nav-container"></div>
         <div class="logo">
             <img src="https://res.cloudinary.com/dcd6l5egh/image/upload/v1742624947/MRLOGO_taq19w.jpg" alt="MR.B'S KITCHEN Logo">
         </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav>
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-            <ul id="nav-menu">
+            
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#specials">Special Items</a></li>
@@ -30,6 +32,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        
     </header>
 
     <section class="hero">
@@ -255,6 +258,18 @@
             </video>
         </div>
     </section>
+    <section id="catering" class="catering">
+        <h2 class="section-title">Catering Services</h2>
+        <p class="catering-desc">
+            Elevate your special occasions with <strong>MR.B'S KITCHEN</strong> exclusive catering services! 
+            We provide customized catering** for gatherings of 15 or more guests, ensuring a delightful dining experience for birthdays, anniversaries, corporate events, engagements, and private parties.
+        </p>
+        <p class="catering-highlight">
+            Indulge in a rich, flavorful menu, crafted to perfection for your guests. Let us take care of the food, while you enjoy the celebration!
+        </p>
+        <a href="#contact" class="btn-primary">Book Catering Now</a>
+    </section>
+    
     <!-- Contact Information Section -->
 <section id="contact-info" class="contact-info">
     <h2>📍 Address</h2>
