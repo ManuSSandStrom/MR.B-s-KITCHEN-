@@ -679,14 +679,25 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 20px; /* Adds spacing above the video */
+    width: 100%; /* Ensures proper responsiveness */
 }
 
+/* Video Styling */
 .video-container video {
-    width: 70%; /* Adjust width to make it smaller */
-    max-width: 500px; /* Limits max width */
+    width: 60%; /* Reduces width slightly */
+    max-width: 450px; /* Limits max width for better proportion */
     height: auto; /* Maintains aspect ratio */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.3); /* Adds soft shadow */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.3); /* Soft shadow */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .video-container video {
+        width: 85%; /* Adjusts width for smaller screens */
+        max-width: 300px; /* Limits width further on mobile */
+        max-height: 200px; /* Prevents excessive height */
+    }
 }
 /* Navigation Container */
 .nav-container {
