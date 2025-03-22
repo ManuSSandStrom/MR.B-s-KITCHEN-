@@ -1,21 +1,23 @@
+<script>
 document.addEventListener("DOMContentLoaded", function () {
-    // Mobile Menu Toggle
+    // Mobile Menu Toggle Fix
     function toggleMenu() {
         document.getElementById("nav-menu").classList.toggle("active");
     }
-    
-// Menu Toggle Script
-document.getElementById("mobile-menu").addEventListener("click", function () {
-    document.querySelector(".nav-links").classList.toggle("active");
-});
 
+    // Fix Menu Toggle Button
     const menuToggle = document.querySelector(".menu-toggle");
     const navMenu = document.getElementById("nav-menu");
 
     menuToggle.addEventListener("click", function () {
         navMenu.classList.toggle("active");
-       
-        
+    });
+
+    // Close menu when clicking a link (on mobile)
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", function () {
+            navMenu.classList.remove("active");
+        });
     });
 
     // Smooth Scrolling to Sections
@@ -29,8 +31,6 @@ document.getElementById("mobile-menu").addEventListener("click", function () {
                     behavior: "smooth"
                 });
             }
-            // Close the menu on mobile after clicking a link
-            navMenu.classList.remove("active");
         });
     });
 
@@ -83,11 +83,6 @@ document.getElementById("mobile-menu").addEventListener("click", function () {
         menuList.appendChild(newItem);
     }
 
-    // ❌ Removed the following menu items:
-    // addMenuItem("Paneer Butter Masala", 250, "paneer.jpg");
-    // addMenuItem("Veg Biryani", 180, "biryani.jpg");
-    // addMenuItem("Mango Shake", 120, "mango-shake.jpg");
-
     // Show Menu Items with Fade-in Animation
     const menuItems = document.querySelectorAll(".menu-item, .special-item, .sweets-item, .juice-item");
     menuItems.forEach((item, index) => {
@@ -99,11 +94,11 @@ document.getElementById("mobile-menu").addEventListener("click", function () {
 
     console.log("MR.B'S KITCHEN Website Loaded Successfully! 🚀");
 });
-<script>
+
+// Fade-in effect for menu sections
 document.addEventListener("DOMContentLoaded", function () {
-    // Apply fade-in animation to menu sections
     const menuSections = document.querySelectorAll(".veg-menu, .nonveg-menu");
-    
+
     menuSections.forEach((section, index) => {
         setTimeout(() => {
             section.style.opacity = "1";
@@ -111,5 +106,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }, index * 300);
     });
 });
-
 </script>
