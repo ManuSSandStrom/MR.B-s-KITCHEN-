@@ -1,10 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Mobile Menu Toggle
+<script>
+function toggleMenu() {
+    const navMenu = document.getElementById("nav-menu");
+    navMenu.classList.toggle("active");
+{"}"}
+</script>
+
     const menuToggle = document.querySelector(".menu-toggle");
     const navMenu = document.getElementById("nav-menu");
 
     menuToggle.addEventListener("click", function () {
         navMenu.classList.toggle("active");
+       
+        
     });
 
     // Smooth Scrolling to Sections
